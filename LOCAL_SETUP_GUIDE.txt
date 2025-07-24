@@ -1,0 +1,283 @@
+PROFESSIONAL PORTFOLIO WEBSITE - LOCAL SETUP GUIDE
+========================================================
+
+This guide will walk you through setting up and running the portfolio website on your local system.
+
+PREREQUISITES
+=============
+Before starting, make sure you have the following installed on your system:
+
+1. Node.js (version 16 or higher)
+   - Download from: https://nodejs.org/
+   - Verify installation: node --version
+
+2. npm (comes with Node.js)
+   - Verify installation: npm --version
+
+3. MongoDB (optional - for contact form and blog features)
+   - Download from: https://www.mongodb.com/try/download/community
+   - Or use MongoDB Atlas (cloud): https://www.mongodb.com/atlas
+   - Verify installation: mongod --version
+
+4. Git (for version control)
+   - Download from: https://git-scm.com/
+   - Verify installation: git --version
+
+5. Code Editor (recommended: VS Code)
+   - Download from: https://code.visualstudio.com/
+
+STEP-BY-STEP SETUP PROCESS
+==========================
+
+STEP 1: CLONE OR DOWNLOAD THE PROJECT
+-------------------------------------
+If you have the project files:
+- Extract them to a folder (e.g., portfolio-website)
+- Open terminal/command prompt in that folder
+
+If using Git:
+git clone <repository-url>
+cd portfolio-website
+
+STEP 2: FRONTEND SETUP
+----------------------
+1. Navigate to the project root directory:
+   cd portfolio-website
+
+2. Install frontend dependencies:
+   npm install
+
+3. Verify all packages are installed:
+   npm list
+
+4. Start the frontend development server:
+   npm run dev
+
+5. The frontend should now be running at:
+   http://localhost:5173
+
+6. You should see the portfolio website in your browser
+
+STEP 3: BACKEND SETUP (OPTIONAL BUT RECOMMENDED)
+------------------------------------------------
+The backend is required for:
+- Contact form functionality
+- Blog management
+- Admin panel features
+
+1. Open a new terminal window/tab
+
+2. Navigate to the backend directory:
+   cd backend
+
+3. Install backend dependencies:
+   npm install
+
+4. Set up environment variables:
+   - Copy the example environment file:
+     cp .env.example .env
+   
+   - Edit the .env file with your configuration:
+     MONGODB_URI=mongodb://localhost:27017/portfolio
+     JWT_SECRET=your-super-secret-jwt-key-here
+     SMTP_HOST=smtp.gmail.com
+     SMTP_PORT=587
+     SMTP_USER=your-email@gmail.com
+     SMTP_PASS=your-app-password
+     CONTACT_EMAIL=your-email@gmail.com
+     PORT=5000
+     NODE_ENV=development
+
+5. Start MongoDB (if using local installation):
+   - Windows: Start MongoDB service from Services
+   - Mac: brew services start mongodb/brew/mongodb-community
+   - Linux: sudo systemctl start mongod
+
+6. Start the backend server:
+   npm run dev
+
+7. The backend should now be running at:
+   http://localhost:5000
+
+8. Test the backend health endpoint:
+   Open browser and go to: http://localhost:5000/api/health
+
+STEP 4: VERIFY EVERYTHING IS WORKING
+------------------------------------
+1. Frontend should be accessible at: http://localhost:5173
+2. Backend should be accessible at: http://localhost:5000
+3. Try navigating through all pages on the frontend
+4. Test the contact form (if backend is running)
+5. Try the admin panel with demo credentials:
+   - Email: admin@example.com
+   - Password: admin123
+
+COMMON ISSUES AND SOLUTIONS
+===========================
+
+ISSUE 1: Port Already in Use
+----------------------------
+Error: "Port 5173 is already in use" or "Port 5000 is already in use"
+
+Solution:
+- Kill the process using the port:
+  Windows: netstat -ano | findstr :5173 then taskkill /PID <PID> /F
+  Mac/Linux: lsof -ti:5173 | xargs kill -9
+- Or change the port in package.json or .env file
+
+ISSUE 2: MongoDB Connection Error
+---------------------------------
+Error: "MongoNetworkError" or "Connection refused"
+
+Solution:
+- Make sure MongoDB is running locally
+- Check if MongoDB service is started
+- Verify the MONGODB_URI in .env file
+- Alternative: Use MongoDB Atlas (cloud database)
+
+ISSUE 3: Missing Dependencies
+-----------------------------
+Error: "Module not found" or "Cannot resolve dependency"
+
+Solution:
+- Delete node_modules folder and package-lock.json
+- Run: npm install
+- If still issues: npm cache clean --force
+
+ISSUE 4: Email Configuration Issues
+-----------------------------------
+Error: Email sending fails in contact form
+
+Solution:
+- Use Gmail App Password instead of regular password
+- Enable 2-factor authentication on Gmail
+- Generate App Password: Google Account > Security > App passwords
+- Update SMTP_PASS in .env with the app password
+
+ISSUE 5: CORS Errors
+--------------------
+Error: "CORS policy" or "Access-Control-Allow-Origin"
+
+Solution:
+- Make sure backend is running on port 5000
+- Check if frontend is making requests to correct backend URL
+- Verify CORS is configured in backend/server.js
+
+DEVELOPMENT WORKFLOW
+===================
+
+DAILY DEVELOPMENT PROCESS:
+1. Start MongoDB (if using local):
+   - Windows: Check MongoDB service is running
+   - Mac: brew services start mongodb/brew/mongodb-community
+   - Linux: sudo systemctl start mongod
+
+2. Start Backend (Terminal 1):
+   cd backend
+   npm run dev
+
+3. Start Frontend (Terminal 2):
+   cd portfolio-website
+   npm run dev
+
+4. Open browser and go to: http://localhost:5173
+
+MAKING CHANGES:
+- Frontend changes: Edit files in src/ folder
+- Backend changes: Edit files in backend/ folder
+- Both servers will auto-reload on file changes
+
+TESTING:
+- Test all pages and functionality
+- Test contact form submission
+- Test admin panel login and features
+- Test responsive design on different screen sizes
+
+CUSTOMIZATION GUIDE
+===================
+
+PERSONAL INFORMATION:
+1. Update name and details in:
+   - src/pages/Home.jsx
+   - src/pages/About.jsx
+   - src/pages/Resume.jsx
+   - src/components/Footer.jsx
+
+2. Replace profile images:
+   - Update image URLs in Home.jsx and About.jsx
+   - Use your own images or stock photos
+
+3. Update social media links:
+   - Edit links in Home.jsx and Footer.jsx
+
+PROJECTS:
+1. Edit src/pages/Projects.jsx
+2. Update project data with your own projects
+3. Add your GitHub and live demo links
+
+SKILLS:
+1. Edit src/pages/Skills.jsx
+2. Update technologies and proficiency levels
+3. Modify tech stack icons and names
+
+COLORS AND STYLING:
+1. Edit tailwind.config.js for custom colors
+2. Modify component styles in individual files
+3. Update theme colors in ThemeContext.jsx
+
+DEPLOYMENT PREPARATION
+=====================
+
+FRONTEND DEPLOYMENT (Vercel/Netlify):
+1. Build the project: npm run build
+2. Test the build: npm run preview
+3. Deploy the dist/ folder
+
+BACKEND DEPLOYMENT (Render/Heroku):
+1. Set environment variables on hosting platform
+2. Use MongoDB Atlas for production database
+3. Update CORS settings for production domain
+
+ENVIRONMENT VARIABLES FOR PRODUCTION:
+- MONGODB_URI: Your MongoDB Atlas connection string
+- JWT_SECRET: Strong secret key for production
+- SMTP_*: Email service configuration
+- NODE_ENV: production
+
+SUPPORT AND TROUBLESHOOTING
+===========================
+
+If you encounter any issues:
+
+1. Check the console for error messages
+2. Verify all services are running (frontend, backend, MongoDB)
+3. Check environment variables are correctly set
+4. Ensure all dependencies are installed
+5. Try restarting the development servers
+
+USEFUL COMMANDS:
+- npm install: Install dependencies
+- npm run dev: Start development server
+- npm run build: Build for production
+- npm run preview: Preview production build
+- npm list: List installed packages
+- npm cache clean --force: Clear npm cache
+
+LOG FILES:
+- Frontend errors: Browser console (F12)
+- Backend errors: Terminal where backend is running
+- MongoDB logs: Check MongoDB log files
+
+ADDITIONAL RESOURCES:
+- React Documentation: https://reactjs.org/docs
+- Tailwind CSS: https://tailwindcss.com/docs
+- Express.js: https://expressjs.com/
+- MongoDB: https://docs.mongodb.com/
+- Framer Motion: https://www.framer.com/motion/
+
+CONTACT:
+For additional support or questions about this setup, please refer to the README.md file or contact the developer.
+
+========================================================
+END OF LOCAL SETUP GUIDE
+========================================================

@@ -27,8 +27,8 @@ const Projects = () => {
         "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["JavaScript", "HTML", "CSS", "REST API"],
       category: "frontend",
-      github: "https://github.com/abhayrajchauhan/quizbot",
-      live: "https://quizbot-demo.com",
+      // github: "https://github.com/abhayrajchauhan/quizbot",
+      // live: "https://quizbot-demo.com",
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const Projects = () => {
         "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["AWS S3", "AWS EC2", "AWS VPC", "AWS IAM"],
       category: "backend",
-      github: "https://github.com/abhayrajchauhan/aws-infrastructure",
+      github: "https://github.com/abhay221B009/CloudShpere",
       live: "#",
     },
     {
@@ -51,8 +51,8 @@ const Projects = () => {
         "https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["React.js", "Tailwind CSS", "Framer Motion"],
       category: "fullstack",
-      github: "https://github.com/abhayrajchauhan/portfolio",
-      live: "https://abhayrajchauhan.com",
+      github: " https://github.com/abhay221B009/Portfolio",
+      live: "https://portfolio-abhay-95.vercel.app/",
     },
   ];
 

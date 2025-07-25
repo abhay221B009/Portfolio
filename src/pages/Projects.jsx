@@ -15,7 +15,7 @@ const Projects = () => {
         "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["React.js", "Context API", "JavaScript", "CSS"],
       category: "fullstack",
-      github: "https://github.com/abhayrajchauhan/shopster",
+      github: "https://github.com/abhay221B009/Shopster",
       live: "https://shopster-arc.netlify.app/",
     },
     {

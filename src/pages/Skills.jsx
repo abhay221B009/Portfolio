@@ -94,7 +94,7 @@ const Resume = () => {
               <Download className="w-5 h-5" />
             </a>
             <a
-              href="/636f60af-8607-41ee-9a7d-bcb16d05323a.pdf"
+              href="/Abhay_Raj_Chauhan_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-gray-700 text-white rounded-full hover:bg-gray-800 transition"
@@ -104,7 +104,159 @@ const Resume = () => {
             </a>
           </div>
 
-          {/* ...rest of the component remains unchanged... */}
+          {/* Personal Info Section */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
+              Abhay Raj Chauhan
+            </h2>
+            <div className="flex flex-wrap gap-4 text-gray-600 dark:text-gray-300">
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-2" />
+                <span>Guna, Madhya Pradesh</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <span>abhayrajchauhan.976@gmail.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <span>+91-6386088195</span>
+              </div>
+              <div className="flex items-center">
+                <Github className="w-4 h-4 mr-2" />
+                <a
+                  href="https://github.com/abhay221B009"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  github.com/abhay221B009
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Summary Section */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+              Summary
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              B.Tech CSE student with full-stack experience (React, JavaScript,
+              AWS), AWS-certified, skilled in building scalable,
+              cloud-integrated web apps.
+            </p>
+          </div>
+
+          {/* Skills Section */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+              Skills
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h4 className="font-medium text-gray-700 dark:text-gray-300">
+                  Languages:
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  JavaScript, C/C++, Python (basic), Java (basic), PHP
+                  (Beginner)
+                </p>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-700 dark:text-gray-300">
+                  Web Technologies:
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  HTML, CSS, React.js, Node.js, REST APIs, WordPress
+                </p>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-700 dark:text-gray-300">
+                  Database:
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  MySQL, MongoDB
+                </p>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-700 dark:text-gray-300">
+                  Cloud/DevOps:
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  AWS (S3, EC2, IAM, VPC), Agile, Scrum
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Projects Section */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+              Projects
+            </h3>
+            <div className="space-y-6">
+              {projects.map((project, index) => (
+                <div key={index} className="border-l-4 border-blue-500 pl-4">
+                  <h4 className="text-lg font-medium text-gray-800 dark:text-white">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {project.title}
+                    </a>
+                  </h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                    {project.tech}
+                  </p>
+                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+                    {project.features.map((feature, i) => (
+                      <li key={i}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Education Section */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+              Education
+            </h3>
+            <div className="space-y-4">
+              {education.map((edu, index) => (
+                <div key={index}>
+                  <h4 className="font-medium text-gray-800 dark:text-white">
+                    {edu.degree}
+                  </h4>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    {edu.school}
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {edu.period}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {edu.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Certifications Section */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+              Certifications
+            </h3>
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+              {certifications.map((cert, index) => (
+                <li key={index}>{cert}</li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
       </div>
     </div>

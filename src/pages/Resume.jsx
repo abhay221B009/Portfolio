@@ -3,20 +3,36 @@ import { motion } from "framer-motion";
 import { Download, Eye, MapPin, Mail, Phone, Github } from "lucide-react";
 
 const Resume = () => {
-  const experience = [
+  const projects = [
     {
-      title: "Full Stack Developer",
-      company: "Shopster - E-commerce Project",
-      period: "Mar 2024 - Present",
-      description:
-        "Built a responsive e-commerce site using React.js with cart, wishlist, and product filtering features. Managed global state via Context API and optimized component performance.",
+      title: "Shopster – E-commerce Web App",
+      link: "https://github.com/abhay221B009/Shopster",
+      tech: "React.js, Context API, JavaScript, HTML, CSS",
+      features: [
+        "Shopping cart, wishlist, product filtering, client-side routing",
+        "Responsive design with reusable components and persistent local state",
+        "Delivered seamless UX with fast navigation and persistent cart/wishlist",
+      ],
     },
     {
-      title: "Frontend Developer",
-      company: "QuizBot - Quiz Application",
-      period: "Jun 2023 - Aug 2023",
-      description:
-        "Developed a quiz app delivering 500+ API-based questions dynamically via JavaScript. Achieved 95% API response efficiency with real-time feedback, scoring system, and timer integration.",
+      title: "QuizBot – Quiz Web Application",
+      link: "https://github.com/abhay221B009/quizbot",
+      tech: "HTML, CSS, JavaScript, Open Trivia API",
+      features: [
+        "Quiz scoring, difficulty & category filters, real-time feedback",
+        "Timer-based questions with responsive layout and interactive feedback",
+        "Enabled 500+ quizzes with 95% API efficiency",
+      ],
+    },
+    {
+      title: "CloudSphere – Cloud Storage Platform",
+      link: "https://github.com/abhay221B009/CloudShpere",
+      tech: "React.js, Node.js (if backend implied), Cloud services",
+      features: [
+        "Secure file upload, download, and sharing functionalities",
+        "Public/private sharing with fine-grained access control",
+        "Auto file deletion and on-the-fly cloud-based file conversion",
+      ],
     },
   ];
 
@@ -24,33 +40,23 @@ const Resume = () => {
     {
       degree: "B.Tech in Computer Science Engineering",
       school: "Jaypee University Of Engineering & Technology",
-      period: "2022 - 2026 (Expected)",
+      period: "Aug 2022 – Jun 2026",
       description:
-        "Currently pursuing Bachelor's degree with focus on full stack development and cloud technologies.",
+        "Pursuing B.Tech in CSE with focus on full-stack development and cloud computing.",
     },
     {
-      degree: "Senior Secondary School",
+      degree: "Class XII (PCM)",
       school: "St. Xaviers Inter College, Jaunpur, U.P.",
       period: "2021",
-      description:
-        "Completed senior secondary education with strong foundation in mathematics and science.",
+      description: "Score: 80.4%",
     },
   ];
 
   const certifications = [
     "AWS Certified Cloud Practitioner – Infosys",
-    "AWS Certified Developer Associate – Infosys",
+    "AWS Certified Developer – Associate – Infosys",
     "Agile and Scrum Fundamentals – Infosys",
   ];
-
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.pdf";
-    link.download = "Abhay_Raj_Chauhan_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <div className="pt-16 min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -79,15 +85,16 @@ const Resume = () => {
         >
           {/* Icon Buttons on Top Right */}
           <div className="absolute right-6 top-6 flex gap-3">
-            <button
-              onClick={handleDownload}
+            <a
+              href="/Abhay_Raj_Chauhan_Resume.pdf"
+              download
               className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
               title="Download PDF Resume"
             >
               <Download className="w-5 h-5" />
-            </button>
+            </a>
             <a
-              href="/resume.pdf"
+              href="/Abhay_Raj_Chauhan_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-gray-700 text-white rounded-full hover:bg-gray-800 transition"
@@ -135,35 +142,75 @@ const Resume = () => {
           {/* Summary */}
           <div className="mb-8">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Professional Summary
+              Summary
             </h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Motivated and detail-oriented B.Tech CSE student with hands-on
-              experience in full stack web development using technologies like
-              React.js, JavaScript, and AWS. Excel in building responsive UIs
-              and integrating RESTful APIs while managing cloud infrastructure.
-              Certified AWS Cloud Practitioner and Developer Associate with
-              commitment to creating scalable and efficient web solutions.
+              B.Tech CSE student with full-stack experience (React, JavaScript,
+              AWS), AWS-certified, skilled in building scalable,
+              cloud-integrated web apps.
             </p>
           </div>
 
-          {/* Experience */}
+          {/* Skills */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              Skills
+            </h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-gray-600 dark:text-gray-400">
+              <li>
+                <strong>Languages:</strong> JavaScript, C/C++, Python (basic),
+                Java (basic), PHP (Beginner)
+              </li>
+              <li>
+                <strong>Web Technologies:</strong> HTML, CSS, React.js, Node.js,
+                REST APIs, WordPress
+              </li>
+              <li>
+                <strong>Database:</strong> MySQL, MongoDB
+              </li>
+              <li>
+                <strong>Cloud/DevOps:</strong> AWS (S3, EC2, IAM, VPC), Agile,
+                Scrum
+              </li>
+              <li>
+                <strong>Tools:</strong> Git, GitHub, VS Code, Figma
+              </li>
+              <li>
+                <strong>Concepts:</strong> OOP, DSA, SDLC, Debugging
+              </li>
+              <li>
+                <strong>Soft Skills:</strong> Teamwork, Communication,
+                Problem-solving, Remote Collaboration
+              </li>
+            </ul>
+          </div>
+
+          {/* Projects */}
           <div className="mb-8">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-              Professional Experience
+              Projects
             </h3>
             <div className="space-y-6">
-              {experience.map((job, index) => (
-                <div key={index} className="border-l-4 border-blue-600 pl-6">
+              {projects.map((project, index) => (
+                <div key={index} className="border-l-4 border-purple-600 pl-6">
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {job.title}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-purple-600"
+                    >
+                      {project.title}
+                    </a>
                   </h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">
-                    {job.company} | {job.period}
+                  <p className="text-gray-600 dark:text-gray-400 italic">
+                    {project.tech}
                   </p>
-                  <p className="text-gray-600 dark:text-gray-400 mt-2">
-                    {job.description}
-                  </p>
+                  <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-400">
+                    {project.features.map((feature, i) => (
+                      <li key={i}>{feature}</li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

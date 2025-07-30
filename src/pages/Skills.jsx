@@ -86,7 +86,7 @@ const Resume = () => {
           {/* Icon Buttons on Top Right */}
           <div className="absolute right-6 top-6 flex gap-3">
             <a
-              href="/636f60af-8607-41ee-9a7d-bcb16d05323a.pdf"
+              href="/Abhay_Raj_Chauhan_Resume.pdf"
               download="Abhay_Raj_Chauhan_Resume.pdf"
               className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
               title="Download PDF Resume"

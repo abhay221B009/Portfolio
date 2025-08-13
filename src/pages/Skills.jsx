@@ -1,261 +1,164 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Download, Eye, MapPin, Mail, Phone, Github } from "lucide-react";
 
-const Resume = () => {
-  const projects = [
+const Skills = () => {
+  const skillCategories = [
     {
-      title: "Shopster – E-commerce Web App",
-      link: "https://github.com/abhay221B009/Shopster",
-      tech: "React.js, Context API, JavaScript, HTML, CSS",
-      features: [
-        "Shopping cart, wishlist, product filtering, client-side routing",
-        "Responsive design with reusable components and persistent local state",
-        "Delivered seamless UX with fast navigation and persistent cart/wishlist",
+      title: "Frontend Development",
+      skills: [
+        { name: "React.js", proficiency: 85, color: "bg-blue-500" },
+        { name: "JavaScript", proficiency: 95, color: "bg-yellow-500" },
+        { name: "HTML/CSS", proficiency: 90, color: "bg-orange-500" },
+        { name: "Responsive Design", proficiency: 88, color: "bg-green-500" },
+        { name: "Context API", proficiency: 80, color: "bg-purple-500" },
+        {
+          name: "Component Optimization",
+          proficiency: 75,
+          color: "bg-indigo-500",
+        },
       ],
     },
     {
-      title: "QuizBot – Quiz Web Application",
-      link: "https://github.com/abhay221B009/quizbot",
-      tech: "HTML, CSS, JavaScript, Open Trivia API",
-      features: [
-        "Quiz scoring, difficulty & category filters, real-time feedback",
-        "Timer-based questions with responsive layout and interactive feedback",
-        "Enabled 500+ quizzes with 95% API efficiency",
+      title: "Programming Languages",
+      skills: [
+        { name: "C", proficiency: 95, color: "bg-blue-600" },
+        { name: "C++", proficiency: 95, color: "bg-blue-700" },
+        { name: "JavaScript", proficiency: 90, color: "bg-yellow-500" },
       ],
     },
     {
-      title: "CloudSphere – Cloud Storage Platform",
-      link: "https://github.com/abhay221B009/CloudShpere",
-      tech: "React.js, Node.js (if backend implied), Cloud services",
-      features: [
-        "Secure file upload, download, and sharing functionalities",
-        "Public/private sharing with fine-grained access control",
-        "Auto file deletion and on-the-fly cloud-based file conversion",
+      title: "Backend & Cloud",
+      skills: [
+        { name: "Node.js", proficiency: 80, color: "bg-green-500" },
+        { name: "MongoDB", proficiency: 75, color: "bg-green-600" },
+        { name: "PostgreSQL", proficiency: 70, color: "bg-blue-700" },
+        { name: "AWS S3", proficiency: 85, color: "bg-orange-400" },
+        { name: "AWS EC2", proficiency: 80, color: "bg-orange-500" },
+        { name: "AWS VPC", proficiency: 75, color: "bg-orange-600" },
+        { name: "AWS IAM", proficiency: 78, color: "bg-red-500" },
+      ],
+    },
+    {
+      title: "Tools & Technologies",
+      skills: [
+        { name: "Git", proficiency: 90, color: "bg-red-500" },
+        { name: "GitHub", proficiency: 88, color: "bg-gray-700" },
+        { name: "VS Code", proficiency: 95, color: "bg-blue-500" },
+        { name: "RESTful APIs", proficiency: 85, color: "bg-purple-500" },
       ],
     },
   ];
 
-  const education = [
-    {
-      degree: "B.Tech in Computer Science Engineering",
-      school: "Jaypee University Of Engineering & Technology",
-      period: "Aug 2022 – Jun 2026",
-      description:
-        "Pursuing B.Tech in CSE with focus on full-stack development and cloud computing.",
-    },
-    {
-      degree: "Class XII (PCM)",
-      school: "St. Xaviers Inter College, Jaunpur, U.P.",
-      period: "2021",
-      description: "Score: 80.4%",
-    },
-  ];
-
-  const certifications = [
-    "AWS Certified Cloud Practitioner – Infosys",
-    "AWS Certified Developer – Associate – Infosys",
-    "Agile and Scrum Fundamentals – Infosys",
+  const techStack = [
+    { name: "React.js", logo: "⚛️" },
+    { name: "JavaScript", logo: "🟨" },
+    { name: "C++", logo: "🔷" },
+    { name: "C", logo: "🔵" },
+    { name: "HTML/CSS", logo: "🌐" },
+    { name: "Node.js", logo: "🟢" },
+    { name: "MongoDB", logo: "🍃" },
+    { name: "PostgreSQL", logo: "🐘" },
+    { name: "AWS", logo: "☁️" },
+    { name: "AWS S3", logo: "📦" },
+    { name: "AWS EC2", logo: "💻" },
+    { name: "Git", logo: "📂" },
+    { name: "GitHub", logo: "🐙" },
+    { name: "VS Code", logo: "💙" },
   ];
 
   return (
     <div className="pt-16 min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Resume
+            My Skills
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
-            My professional experience and qualifications
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Technologies and tools I work with to bring ideas to life
           </p>
         </motion.div>
 
-        {/* Resume Card */}
+        {/* Tech Stack Icons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8"
+          className="mb-20"
         >
-          {/* Icon Buttons on Top Right */}
-          <div className="absolute right-6 top-6 flex gap-3">
-            <a
-              href="/Abhay_Raj_Chauhan_Resume.pdf"
-              download="Abhay_Raj_Chauhan_Resume.pdf"
-              className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
-              title="Download PDF Resume"
-            >
-              <Download className="w-5 h-5" />
-            </a>
-            <a
-              href="/Abhay_Raj_Chauhan_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-gray-700 text-white rounded-full hover:bg-gray-800 transition"
-              title="View PDF Resume"
-            >
-              <Eye className="w-5 h-5" />
-            </a>
-          </div>
-
-          {/* Personal Info Section */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-              Abhay Raj Chauhan
-            </h2>
-            <div className="flex flex-wrap gap-4 text-gray-600 dark:text-gray-300">
-              <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2" />
-                <span>Guna, Madhya Pradesh</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <span>abhayrajchauhan.976@gmail.com</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+91-6386088195</span>
-              </div>
-              <div className="flex items-center">
-                <Github className="w-4 h-4 mr-2" />
-                <a
-                  href="https://github.com/abhay221B009"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  github.com/abhay221B009
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Summary Section */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-              Summary
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              B.Tech CSE student with full-stack experience (React, JavaScript,
-              AWS), AWS-certified, skilled in building scalable,
-              cloud-integrated web apps.
-            </p>
-          </div>
-
-          {/* Skills Section */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-              Skills
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-medium text-gray-700 dark:text-gray-300">
-                  Languages:
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400">
-                  JavaScript, C/C++, Python (basic), Java (basic), PHP
-                  (Beginner)
-                </p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-700 dark:text-gray-300">
-                  Web Technologies:
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400">
-                  HTML, CSS, React.js, Node.js, REST APIs, WordPress
-                </p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-700 dark:text-gray-300">
-                  Database:
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400">
-                  MySQL, MongoDB
-                </p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-700 dark:text-gray-300">
-                  Cloud/DevOps:
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400">
-                  AWS (S3, EC2, IAM, VPC), Agile, Scrum
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Projects Section */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
-              Projects
-            </h3>
-            <div className="space-y-6">
-              {projects.map((project, index) => (
-                <div key={index} className="border-l-4 border-blue-500 pl-4">
-                  <h4 className="text-lg font-medium text-gray-800 dark:text-white">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      {project.title}
-                    </a>
-                  </h4>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                    {project.tech}
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
-                    {project.features.map((feature, i) => (
-                      <li key={i}>{feature}</li>
-                    ))}
-                  </ul>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
+            Tech Stack
+          </h2>
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {techStack.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow group"
+              >
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+                  {tech.logo}
                 </div>
-              ))}
-            </div>
+                <h3 className="text-sm font-medium text-gray-900 dark:text-white text-center">
+                  {tech.name}
+                </h3>
+              </motion.div>
+            ))}
           </div>
+        </motion.div>
 
-          {/* Education Section */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
-              Education
-            </h3>
-            <div className="space-y-4">
-              {education.map((edu, index) => (
-                <div key={index}>
-                  <h4 className="font-medium text-gray-800 dark:text-white">
-                    {edu.degree}
-                  </h4>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    {edu.school}
-                  </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {edu.period}
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {edu.description}
-                  </p>
+        {/* Skills with Proficiency */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
+            Proficiency Levels
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {skillCategories.map((category, categoryIndex) => (
+              <div
+                key={categoryIndex}
+                className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+                  {category.title}
+                </h3>
+                <div className="space-y-6">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div key={skillIndex}>
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-gray-700 dark:text-gray-300 font-medium">
+                          {skill.name}
+                        </span>
+                        <span className="text-gray-500 dark:text-gray-400 text-sm">
+                          {skill.proficiency}%
+                        </span>
+                      </div>
+                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: `${skill.proficiency}%` }}
+                          transition={{
+                            duration: 1,
+                            delay: categoryIndex * 0.2 + skillIndex * 0.1,
+                          }}
+                          className={`h-2 rounded-full ${skill.color}`}
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Certifications Section */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
-              Certifications
-            </h3>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
-              {certifications.map((cert, index) => (
-                <li key={index}>{cert}</li>
-              ))}
-            </ul>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
@@ -263,4 +166,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default Skills;

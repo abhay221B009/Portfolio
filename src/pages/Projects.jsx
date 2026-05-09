@@ -18,8 +18,28 @@ const Projects = () => {
       github: "https://github.com/abhay221B009/Shopster",
       live: "https://shopster-arc.netlify.app/",
     },
+   {
+  id: 2,
+  title: "Trippy - AI Powered Travel Planner",
+  description:
+    "Developed a full-stack AI-powered travel planning web app using React, Node.js, Express, and MongoDB. Integrated Google Gemini AI for personalized itinerary generation with JWT authentication, trip management, and responsive modern UI.",
+  image:
+    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=500",
+  technologies: [
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Gemini API",
+    "Tailwind CSS",
+    "JWT",
+  ],
+  category: "fullstack",
+  github: "https://github.com/abhay221B009/Trippy",
+  live: "https://trippy-sand-five.vercel.app/",
+},
     {
-      id: 2,
+      id: 3,
       title: "QuizBot - Quiz Web Application",
       description:
         "Developed a quiz app delivering 500+ API-based questions dynamically via JavaScript. Achieved 95% API response efficiency with real-time feedback, scoring system, and timer integration.",
@@ -31,7 +51,7 @@ const Projects = () => {
       // live: "https://quizbot-demo.com",
     },
     {
-      id: 3,
+      id: 4,
       title: "AWS Cloud Infrastructure",
       description:
         "Designed and implemented scalable cloud infrastructure using AWS services including S3, EC2, VPC, and IAM for secure and efficient web application deployment.",
@@ -43,7 +63,7 @@ const Projects = () => {
       live: "#",
     },
     {
-      id: 4,
+      id: 5,
       title: "Portfolio Website",
       description:
         "A responsive portfolio website built with React.js showcasing projects, skills, and achievements with dark/light mode toggle and smooth animations.",

@@ -7,19 +7,7 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
-      title: "Shopster - E-commerce Web App",
-      description:
-        "Built a responsive e-commerce site using React.js with cart, wishlist, and product filtering features. Managed global state via Context API and optimized component performance.",
-      image:
-        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=500",
-      technologies: ["React.js", "Context API", "JavaScript", "CSS"],
-      category: "fullstack",
-      github: "https://github.com/abhay221B009/Shopster",
-      live: "https://shopster-arc.netlify.app/",
-    },
-   {
-  id: 2,
+    id: 1,
   title: "Trippy - AI Powered Travel Planner",
   description:
     "Developed a full-stack AI-powered travel planning web app using React, Node.js, Express, and MongoDB. Integrated Google Gemini AI for personalized itinerary generation with JWT authentication, trip management, and responsive modern UI.",
@@ -38,6 +26,22 @@ const Projects = () => {
   github: "https://github.com/abhay221B009/Trippy",
   live: "https://trippy-sand-five.vercel.app/",
 },
+    
+    
+    {
+      id: 2,
+      title: "Shopster - E-commerce Web App",
+      description:
+        "Built a responsive e-commerce site using React.js with cart, wishlist, and product filtering features. Managed global state via Context API and optimized component performance.",
+      image:
+        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=500",
+      technologies: ["React.js", "Context API", "JavaScript", "CSS"],
+      category: "fullstack",
+      github: "https://github.com/abhay221B009/Shopster",
+      live: "https://shopster-arc.netlify.app/",
+    },
+   {
+  
     {
       id: 3,
       title: "QuizBot - Quiz Web Application",

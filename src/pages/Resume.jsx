@@ -73,11 +73,18 @@ const Resume = () => {
       degree: "Class XII (PCM)",
       school: "St. Xavier’s Inter College",
       period: "2021",
-      description: "Score: 80.4%",
+      description: "Score: 80%",
+    },
+    {
+      degree: "Class X ",
+      school: "St. Xavier’s Inter College",
+      period: "2021",
+      description: "Score: 87.4%",
     },
   ];
 
   const certifications = [
+    "React.js Mastery – Infosys",
     "AWS Certified Cloud Practitioner – Infosys",
     "AWS Certified Developer – Associate – Infosys",
     "Agile and Scrum Fundamentals – Infosys",

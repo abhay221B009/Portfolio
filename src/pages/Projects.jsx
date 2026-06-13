@@ -40,8 +40,6 @@ const Projects = () => {
       github: "https://github.com/abhay221B009/Shopster",
       live: "https://shopster-arc.netlify.app/",
     },
-   {
-  
     {
       id: 3,
       title: "QuizBot - Quiz Web Application",

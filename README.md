@@ -206,4 +206,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions or support, please contact [your-email@example.com](mailto:your-email@example.com).
+For questions or opportunities, please contact [abhayrajchauhan.976@gmail.com](mailto:abhayrajchauhan.976@gmail.com).

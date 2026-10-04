@@ -8,314 +8,272 @@ import {
   Phone,
   Github,
   Linkedin,
+  Briefcase,
+  GraduationCap,
+  Award,
+  Layers,
+  CheckCircle2,
 } from "lucide-react";
 
 const Resume = () => {
+  const experiences = [
+    {
+      role: "Full Stack Developer",
+      company: "WapHire (Employer Portal & ATS)",
+      duration: "Recent Experience",
+      location: "Full-Stack Development",
+      points: [
+        "Engineered core employer and recruiter workflows with React 18, Vite, Redux Toolkit, and Axios.",
+        "Built modular backend REST API endpoints using Python, Django 5.2, and Django REST Framework.",
+        "Implemented JWT authentication (SimpleJWT), protected routes, and multi-tenant organization models.",
+        "Designed Instahyre-style candidate tracking pipeline with recruiter stage management and recruiter inbox.",
+        "Integrated AI recruitment tools for automated job description generation and zero-assumption JD extraction.",
+        "Managed Git branching strategies, pull requests, and automated CI/CD workflows via GitHub Actions.",
+      ],
+    },
+    {
+      role: "Web Development Intern",
+      company: "Proxenix",
+      duration: "June 2025 – July 2025",
+      location: "Remote",
+      points: [
+        "Built responsive client-facing interfaces with React, HTML5, and CSS3.",
+        "Integrated backend REST APIs into dashboards with JWT-based session handling.",
+        "Implemented reusable component patterns and improved client-side routing consistency.",
+        "Collaborated in Agile sprint cadence using Git, GitHub, and client feedback iterations.",
+      ],
+    },
+  ];
+
   const projects = [
     {
-      title: "Trippy – AI-Powered Travel Planner",
-      link: "https://github.com/abhay221B009",
-      live: "#",
-      tech: "React.js, Node.js, Express.js, MongoDB, JWT, Gemini API, Tailwind CSS",
-      features: [
-        "Built a full-stack AI travel planning app with secure JWT authentication",
-        "Integrated Google Gemini API for personalized itinerary generation",
-        "Implemented Zod validation, bcrypt hashing, and protected REST APIs",
-        "Designed smooth UI using Tailwind CSS, Framer Motion, and GSAP",
-        "Deployed using Vercel and Render",
+      title: "WapHire — Employer Portal & ATS",
+      tech: "React 18, Vite, Redux Toolkit, Python, Django 5.2, Django REST Framework, PostgreSQL/SQLite, JWT, GitHub Actions",
+      points: [
+        "Developed end-to-end recruitment platform for job publishing, candidate management, and hiring pipelines.",
+        "Architected modular endpoints: /api/v1/auth/, /jobs/, /candidates/, /inbox/, /team/.",
+        "Structured async worker topology planning with Redis and Celery for background parsing tasks.",
       ],
     },
     {
-      title: "CloudSphere – Cloud Storage Platform",
-      link: "https://github.com/abhay221B009/CloudShpere",
-      tech: "React.js, Node.js, AWS S3, MongoDB",
-      features: [
-        "Secure upload/download with AWS S3 integration",
-        "Implemented access control and file-sharing system",
-        "Added auto-deletion and cloud file conversion features",
-        "Improved API responsiveness by 25%",
-        "Tested with 200+ files and achieved 100% successful share rate",
+      title: "Trippy — AI-Powered Travel Planner",
+      tech: "React.js, Node.js, Express.js, MongoDB, Google Gemini API, JWT, Zod, bcrypt, Tailwind CSS",
+      points: [
+        "Constructed full-stack travel planner generating tailored itineraries with Gemini LLM integration.",
+        "Implemented secure JWT user authentication, password hashing with bcrypt, and Zod input validation schemas.",
+        "Configured multi-service deployment using Vercel (client) and Render (server).",
       ],
     },
     {
-      title: "Shopster – E-commerce Web App",
-      link: "https://github.com/abhay221B009/Shopster",
-      tech: "React.js, Context API, JavaScript, HTML, CSS",
-      features: [
-        "Shopping cart, wishlist, and product filtering",
-        "Responsive UI with reusable components",
-        "Persistent cart and wishlist using local storage",
-        "Fast navigation with client-side routing",
+      title: "Shopster — E-Commerce Web Application",
+      tech: "React.js, Node.js, Express.js, MongoDB, Razorpay, Context API, Tailwind CSS",
+      points: [
+        "Built responsive e-commerce application featuring dynamic product catalog and multi-facet filtering.",
+        "Maintained global cart and wishlist state via React Context API with persistent browser storage.",
+        "Integrated Razorpay payment gateway for secure transaction processing.",
       ],
     },
     {
-      title: "QuizBot – Quiz Web Application",
-      link: "https://github.com/abhay221B009/quizbot",
-      tech: "HTML, CSS, JavaScript, Open Trivia API",
-      features: [
-        "Quiz scoring with difficulty and category filters",
-        "Timer-based interactive quiz experience",
-        "Real-time feedback and responsive layout",
-        "Handled 500+ quizzes with high API efficiency",
+      title: "CloudSphere — Cloud Storage Platform",
+      tech: "Node.js, Express.js, AWS S3, MongoDB, AWS EC2, AWS IAM",
+      points: [
+        "Engineered secure cloud file management platform integrating Node.js backend with Amazon S3.",
+        "Implemented presigned URL generation for authorized file uploads, downloads, and access control.",
+        "Configured cloud resources using AWS IAM policies and EC2 instances.",
       ],
     },
   ];
 
   const education = [
     {
-      degree: "B.Tech in Computer Science Engineering",
-      school: "Jaypee University of Engineering and Technology",
-      period: "Aug 2022 – Jun 2026",
+      degree: "B.Tech in Computer Science & Engineering",
+      school: "Jaypee University of Engineering and Technology (JUET)",
+      period: "Aug 2022 – June 2026",
+      location: "Guna, Madhya Pradesh",
       description:
-        "Focused on Full Stack Development, Cloud Computing, and Scalable Software Engineering.",
+        "Comprehensive studies in Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, and Cloud Computing.",
     },
     {
       degree: "Class XII (PCM)",
-      school: "St. Xavier’s Inter College",
+      school: "St. Xavier's Inter College",
       period: "2021",
-      description: "Score: 80%",
-    },
-    {
-      degree: "Class X ",
-      school: "St. Xavier’s Inter College",
-      period: "2021",
-      description: "Score: 87.4%",
+      location: "Jaunpur, Uttar Pradesh",
+      description: "Academic focus on Physics, Chemistry, and Mathematics (Score: 80.4%).",
     },
   ];
 
   const certifications = [
-    "React.js Mastery – Infosys",
-    "AWS Certified Cloud Practitioner – Infosys",
-    "AWS Certified Developer – Associate – Infosys",
-    "Agile and Scrum Fundamentals – Infosys",
+    "AWS Certified Developer – Associate — Infosys",
+    "AWS Certified Cloud Practitioner — Infosys",
+    "Agile and Scrum Fundamentals — Infosys",
   ];
 
-  const experience = [
+  const skillCategories = [
     {
-      role: "Web Development Intern",
-      company: "Proxenix",
-      duration: "Jun 2025 – Jul 2025",
-      location: "Remote",
-      points: [
-        "Built responsive UI with React, HTML/CSS and integrated backend APIs",
-        "Implemented reusable components and JWT-based authentication",
-        "Worked with Git, GitHub, and Agile workflows",
-        "Participated in real-world deployment and client feedback cycles",
-      ],
+      category: "Languages",
+      skills: "JavaScript (ES6+), Python, C, C++, Java",
+    },
+    {
+      category: "Frontend",
+      skills: "React 18, Vite, Redux Toolkit, Next.js, HTML5, CSS3, Tailwind CSS, Framer Motion, GSAP",
+    },
+    {
+      category: "Backend & APIs",
+      skills: "Python / Django 5.2, Django REST Framework, Node.js, Express.js, REST APIs, JWT, Zod, bcrypt",
+    },
+    {
+      category: "Databases",
+      skills: "PostgreSQL, MongoDB, SQLite, MySQL",
+    },
+    {
+      category: "Cloud & DevOps",
+      skills: "AWS (S3, EC2, IAM, VPC), GitHub Actions, Vercel, Render | Planned: Redis, Celery",
+    },
+    {
+      category: "AI & Tools",
+      skills: "Google Gemini API, OpenAI API, Git, GitHub, VS Code, Postman, Figma",
     },
   ];
 
   return (
-    <div className="pt-16 min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="pt-16 min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Resume
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+            Curriculum Vitae
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white mt-1 mb-2">
+            Professional Resume
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
-            Full Stack Developer | AWS Cloud Practitioner
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Junior Full-Stack Software Engineer
           </p>
         </motion.div>
 
-        {/* Resume Card */}
+        {/* Resume Sheet */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 sm:p-12 space-y-10"
         >
-          {/* Top Buttons */}
-          <div className="absolute right-6 top-6 flex gap-3">
-            <a
-              href="/Abhay_resume.pdf"
-              download
-              className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
-            >
-              <Download className="w-5 h-5" />
-            </a>
+          {/* Action Triggers */}
+          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-gray-200 dark:border-gray-700">
+            <div>
+              <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
+                Abhay Raj Chauhan
+              </h2>
+              <p className="text-base font-semibold text-blue-600 dark:text-blue-400 mt-0.5">
+                Junior Full-Stack Software Engineer
+              </p>
+            </div>
 
-            <a
-              href="/Abhay_resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-gray-700 text-white rounded-full hover:bg-gray-800 transition"
-            >
-              <Eye className="w-5 h-5" />
-            </a>
-          </div>
+            <div className="flex items-center gap-3">
+              <a
+                href="/Abhay_resume.pdf"
+                download="Abhay_Raj_Chauhan_Resume.pdf"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold rounded-lg transition-colors shadow-xs"
+              >
+                <Download className="w-4 h-4" />
+                Download PDF
+              </a>
 
-          {/* Personal Info */}
-          <div className="mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              Abhay Raj Chauhan
-            </h2>
-
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-5">
-              Full Stack Developer & Cloud Enthusiast
-            </p>
-
-            <div className="flex flex-wrap gap-4 text-gray-600 dark:text-gray-400">
-              <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-1" />
-                Jaunpur, Uttar Pradesh
-              </div>
-
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-1" />
-                abhayrajchauhan.976@gmail.com
-              </div>
-
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-1" />
-                +91-6386088195
-              </div>
-
-              <div className="flex items-center">
-                <Github className="w-4 h-4 mr-1" />
-                <a
-                  href="https://github.com/abhay221B009"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-600 underline"
-                >
-                  GitHub
-                </a>
-              </div>
-
-              <div className="flex items-center">
-                <Linkedin className="w-4 h-4 mr-1" />
-                <a
-                  href="https://www.linkedin.com/in/abhay-chauhan-635995219/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-600 underline"
-                >
-                  LinkedIn
-                </a>
-              </div>
+              <a
+                href="/Abhay_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 text-xs sm:text-sm font-semibold rounded-lg transition-colors"
+              >
+                <Eye className="w-4 h-4" />
+                Open PDF
+              </a>
             </div>
           </div>
 
-          {/* Summary */}
-          <div className="mb-10">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Summary
-            </h3>
+          {/* Contact Bar */}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+            <div className="flex items-center gap-1.5">
+              <MapPin className="w-4 h-4 text-gray-400" />
+              <span>Open to Opportunities (Delhi NCR, Bengaluru, Remote)</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Mail className="w-4 h-4 text-gray-400" />
+              <a href="mailto:abhayrajchauhan.976@gmail.com" className="hover:text-blue-600 dark:hover:text-blue-400">
+                abhayrajchauhan.976@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Phone className="w-4 h-4 text-gray-400" />
+              <span>+91 63860 88195</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Github className="w-4 h-4 text-gray-400" />
+              <a
+                href="https://github.com/abhay221B009"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 dark:hover:text-blue-400 underline"
+              >
+                github.com/abhay221B009
+              </a>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Linkedin className="w-4 h-4 text-gray-400" />
+              <a
+                href="https://www.linkedin.com/in/abhay-chauhan-635995219/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 dark:hover:text-blue-400 underline"
+              >
+                linkedin.com/in/abhay-chauhan-635995219
+              </a>
+            </div>
+          </div>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              B.Tech Computer Science student with hands-on experience in
-              full-stack web development using React.js, Node.js, MongoDB, and
-              AWS. Built and deployed projects including an AI-powered travel
-              planning application integrated with Google Gemini API. Passionate
-              about scalable software development, cloud technologies, and
-              creating modern user-focused applications.
+          {/* Professional Summary */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-2 border-b border-gray-100 dark:border-gray-700 pb-1 flex items-center gap-2">
+              <Briefcase className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              Professional Summary
+            </h3>
+            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+              Full-Stack Software Engineer with proven hands-on experience building production-grade web applications, scalable REST APIs, and AI integrations. Experienced with React 18, Redux Toolkit, Python/Django REST Framework, Node.js, PostgreSQL, and MongoDB. Contributed to real-world products including the WapHire ATS & employer portal and the Trippy AI travel planner. B.Tech Computer Science graduate (June 2026) with verified credentials in AWS cloud development and agile practices.
             </p>
           </div>
 
-          {/* Experience */}
-          <div className="mb-10">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-              Experience
+          {/* Professional Experience */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4 border-b border-gray-100 dark:border-gray-700 pb-1 flex items-center gap-2">
+              <Briefcase className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              Professional Experience
             </h3>
 
-            {experience.map((exp, index) => (
-              <div key={index} className="border-l-4 border-blue-600 pl-6 mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  {exp.role}
-                </h4>
-
-                <p className="text-blue-600 dark:text-blue-400 font-medium">
-                  {exp.company} | {exp.location}
-                </p>
-
-                <p className="text-sm text-gray-500 mb-3">{exp.duration}</p>
-
-                <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
-                  {exp.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Skills */}
-          <div className="mb-10">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-              Skills
-            </h3>
-
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-3 text-gray-600 dark:text-gray-400">
-              <li>
-                <strong>Languages:</strong> JavaScript, C/C++
-              </li>
-
-              <li>
-                <strong>Frontend:</strong> React.js, Next.js, HTML, CSS,
-                Tailwind CSS, Framer Motion, GSAP
-              </li>
-
-              <li>
-                <strong>Backend:</strong> Node.js, Express.js, REST APIs, JWT,
-                bcrypt, Zod
-              </li>
-
-              <li>
-                <strong>Database:</strong> MongoDB, MySQL
-              </li>
-
-              <li>
-                <strong>Cloud/DevOps:</strong> AWS (S3, EC2, IAM, VPC), Vercel,
-                Render
-              </li>
-
-              <li>
-                <strong>AI Integration:</strong> Gemini API, OpenAI API
-              </li>
-
-              <li>
-                <strong>Tools:</strong> Git, GitHub, VS Code, Postman, Figma
-              </li>
-
-              <li>
-                <strong>Concepts:</strong> OOP, DSA, MVC, SDLC, Agile, Scrum
-              </li>
-            </ul>
-          </div>
-
-          {/* Projects */}
-          <div className="mb-10">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-              Projects
-            </h3>
-
-            <div className="space-y-8">
-              {projects.map((project, index) => (
-                <div key={index} className="border-l-4 border-purple-600 pl-6">
-                  <h4 className="text-xl font-semibold text-purple-600">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      {project.title}
-                    </a>
-                  </h4>
-
-                  <p className="italic text-gray-600 dark:text-gray-400">
-                    {project.tech}
-                  </p>
-
-                  <ul className="list-disc list-inside mt-3 text-gray-600 dark:text-gray-400 space-y-1">
-                    {project.features.map((feature, i) => (
-                      <li key={i}>{feature}</li>
+            <div className="space-y-6">
+              {experiences.map((exp, idx) => (
+                <div key={idx} className="border-l-2 border-blue-500 pl-4 space-y-1.5">
+                  <div className="flex flex-wrap items-center justify-between gap-1">
+                    <h4 className="text-base font-bold text-gray-900 dark:text-white">
+                      {exp.role} <span className="font-normal text-gray-500 dark:text-gray-400">— {exp.company}</span>
+                    </h4>
+                    <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">
+                      {exp.duration}
+                    </span>
+                  </div>
+                  <div className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                    {exp.location}
+                  </div>
+                  <ul className="list-disc list-inside space-y-1 text-xs sm:text-sm text-gray-600 dark:text-gray-300 pt-1">
+                    {exp.points.map((pt, pIdx) => (
+                      <li key={pIdx} className="leading-relaxed">
+                        {pt}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -323,24 +281,79 @@ const Resume = () => {
             </div>
           </div>
 
-          {/* Education */}
-          <div className="mb-10">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-              Education
+          {/* Featured Projects */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4 border-b border-gray-100 dark:border-gray-700 pb-1 flex items-center gap-2">
+              <Layers className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              Key Engineering Projects
             </h3>
 
             <div className="space-y-5">
-              {education.map((edu, index) => (
-                <div key={index} className="border-l-4 border-emerald-600 pl-6">
-                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {edu.degree}
-                  </h4>
-
-                  <p className="text-emerald-600 dark:text-emerald-400 font-medium">
-                    {edu.school} | {edu.period}
+              {projects.map((proj, idx) => (
+                <div key={idx} className="border-l-2 border-indigo-500 pl-4 space-y-1">
+                  <div className="flex flex-wrap items-center justify-between gap-1">
+                    <h4 className="text-base font-bold text-gray-900 dark:text-white">
+                      {proj.title}
+                    </h4>
+                  </div>
+                  <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                    {proj.tech}
                   </p>
+                  <ul className="list-disc list-inside space-y-1 text-xs sm:text-sm text-gray-600 dark:text-gray-300 pt-1">
+                    {proj.points.map((pt, pIdx) => (
+                      <li key={pIdx} className="leading-relaxed">
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
 
-                  <p className="text-gray-600 dark:text-gray-400 mt-2">
+          {/* Technical Skills */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4 border-b border-gray-100 dark:border-gray-700 pb-1 flex items-center gap-2">
+              <Layers className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              Technical Skills
+            </h3>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+              {skillCategories.map((cat, idx) => (
+                <div key={idx} className="p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                  <div className="font-bold text-gray-900 dark:text-white mb-0.5">
+                    {cat.category}
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-300">
+                    {cat.skills}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Education */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4 border-b border-gray-100 dark:border-gray-700 pb-1 flex items-center gap-2">
+              <GraduationCap className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              Education
+            </h3>
+
+            <div className="space-y-4">
+              {education.map((edu, idx) => (
+                <div key={idx} className="border-l-2 border-emerald-500 pl-4 space-y-0.5">
+                  <div className="flex flex-wrap items-center justify-between gap-1">
+                    <h4 className="text-base font-bold text-gray-900 dark:text-white">
+                      {edu.degree}
+                    </h4>
+                    <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">
+                      {edu.period}
+                    </span>
+                  </div>
+                  <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                    {edu.school} • {edu.location}
+                  </p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 pt-1">
                     {edu.description}
                   </p>
                 </div>
@@ -350,26 +363,26 @@ const Resume = () => {
 
           {/* Certifications */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-              Certifications
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4 border-b border-gray-100 dark:border-gray-700 pb-1 flex items-center gap-2">
+              <Award className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              Industry Certifications
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {certifications.map((cert, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {certifications.map((cert, idx) => (
                 <div
-                  key={index}
-                  className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
+                  key={idx}
+                  className="p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg flex items-center gap-2.5 text-xs sm:text-sm text-gray-700 dark:text-gray-300"
                 >
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-
-                  <span className="text-gray-700 dark:text-gray-300">
-                    {cert}
-                  </span>
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <span>{cert}</span>
                 </div>
               ))}
             </div>
           </div>
+
         </motion.div>
+
       </div>
     </div>
   );

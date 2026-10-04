@@ -233,7 +233,7 @@ const Contact = () => {
                 Active Job Search
               </div>
               <h3 className="text-lg font-bold">
-                Junior Software Engineer & Full-Stack Roles
+                Software Engineer & Full-Stack Roles
               </h3>
               <p className="text-xs text-blue-100 leading-relaxed">
                 Actively interviewing for software engineering positions. Open to on-site roles in Delhi NCR (Noida, Gurugram, Delhi), Bengaluru, Lucknow, or remote setups.

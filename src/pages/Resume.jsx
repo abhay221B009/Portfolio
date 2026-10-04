@@ -153,7 +153,7 @@ const Resume = () => {
             Professional Resume
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Junior Full-Stack Software Engineer
+            Full-Stack Software Engineer
           </p>
         </motion.div>
 
@@ -171,7 +171,7 @@ const Resume = () => {
                 Abhay Raj Chauhan
               </h2>
               <p className="text-base font-semibold text-blue-600 dark:text-blue-400 mt-0.5">
-                Junior Full-Stack Software Engineer
+                Full-Stack Software Engineer
               </p>
             </div>
 

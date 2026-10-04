@@ -63,7 +63,7 @@ const Home = () => {
               {/* Status Pill */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-medium">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Open to Junior Software Engineer & Full-Stack Roles
+                Open to Software Engineering & Full-Stack Roles
               </div>
 
               <div className="space-y-3">
@@ -75,7 +75,7 @@ const Home = () => {
                 </h1>
 
                 <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                  Junior Full-Stack Software Engineer
+                  Full-Stack Software Engineer
                 </h2>
               </div>
 
@@ -161,32 +161,33 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column: Clean Profile Representation */}
+            {/* Right Column: Clean Profile Representation with Balanced Vertical Framing */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:col-span-5 flex justify-center"
             >
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80">
+              <div className="relative w-72 sm:w-80 h-96 sm:h-[420px]">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-600 to-purple-600 opacity-20 blur-xl"></div>
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-700 shadow-xl bg-gray-100 dark:bg-gray-800">
                   <img
                     src={Profile}
                     alt="Abhay Raj Chauhan"
                     className="w-full h-full object-cover"
+                    style={{ objectPosition: "center 18%" }}
                   />
                 </div>
                 
-                {/* Clean, Non-Gimmicky Badges */}
-                <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 px-3.5 py-2 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                {/* Badges positioned cleanly at bottom to avoid overlapping head or shoulders */}
+                <div className="absolute -bottom-3 -left-3 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-blue-500"></span>
                   <span className="text-xs font-semibold text-gray-800 dark:text-gray-200">
                     Full-Stack Engineer
                   </span>
                 </div>
 
-                <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 px-3.5 py-2 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 flex items-center gap-2">
+                <div className="absolute -bottom-3 -right-3 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 flex items-center gap-2">
                   <Briefcase className="w-3.5 h-3.5 text-purple-500" />
                   <span className="text-xs font-semibold text-gray-800 dark:text-gray-200">
                     WapHire Contributor

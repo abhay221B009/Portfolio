@@ -93,7 +93,7 @@ const About = () => {
             About Me
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            Junior Full-Stack Software Engineer with hands-on experience building production-focused web applications, scalable REST APIs, and AI-enabled workflows.
+            Full-Stack Software Engineer with hands-on experience building production-focused web applications, scalable REST APIs, and AI-enabled workflows.
           </p>
         </motion.div>
 
@@ -118,7 +118,7 @@ const About = () => {
               Prior to WapHire, I completed a verified Web Development Internship at <strong>Proxenix</strong>, where I implemented reusable React components, integrated client-facing REST APIs with JWT authentication, and worked through iterative deployment cycles.
             </p>
             <p>
-              I am passionate about clean software architecture, system reliability, and continuous learning. I am currently seeking full-time Junior Software Engineer, Full-Stack Developer, and Backend Engineer opportunities across Delhi NCR, Bengaluru, Lucknow, or Remote.
+              I am passionate about clean software architecture, system reliability, and continuous learning. I am currently seeking full-time Software Engineer, Full-Stack Developer, and Backend Engineer opportunities across Delhi NCR, Bengaluru, Lucknow, or Remote.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-3">

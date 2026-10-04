@@ -32,7 +32,7 @@ const Footer = () => {
               Abhay Raj Chauhan
             </h3>
             <p className="text-xs font-semibold text-blue-600 dark:text-blue-400">
-              Junior Full-Stack Software Engineer
+              Full-Stack Software Engineer
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
               Building production-oriented web applications, robust backend REST APIs, and AI-powered workflows with React, Django, Node.js, and modern cloud technologies.
@@ -112,7 +112,7 @@ const Footer = () => {
                 Full-Stack Software Engineer
               </li>
               <li className="font-semibold text-gray-800 dark:text-gray-200">
-                Junior Software Engineer
+                Software Engineer
               </li>
               <li className="font-semibold text-gray-800 dark:text-gray-200">
                 Backend Engineer (Python/Node)
